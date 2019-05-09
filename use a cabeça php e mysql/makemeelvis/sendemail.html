@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Make Me Elvis - Send Email</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <img src="img/blankface.jpg" width="161" height="350" alt="" style="float:right"/>
+    <img src="img/elvislogo.gif" name="elvislogo" width="229" height="32" border="0" alt="Make Me Elvis"/>
+    
+    <p><strong>Privado:</strong> Para o uso de Elmer SÓ<br/>
+       escreva e envie um e-mail a sócios da lista de clientes.</p>
+    
+    <form action="sendemail.php" method="post">
+        <label for="subject">Assunto do email: </label><br/>
+        <input type="text" name="subject" id="subject" size="30"/><br/><br/>
+        <label for="elvismail">Conteudo do email: </label><br/>
+        <textarea name="elvismail" id="elvismail" cols="40" rows="8"></textarea><br/><br/>
+        <input type="submit" name="submit" value="Enviar"/>
+    </form>
+</body>
+</html>

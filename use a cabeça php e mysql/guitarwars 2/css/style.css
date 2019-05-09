@@ -1,0 +1,58 @@
+.error {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.topscoreheader {
+  text-align: center;
+  font-size: 200%;
+  background-color: #36407F;
+  color: #FFFFFF;
+}
+
+.bodyscore {
+  width: 700px;
+  color: #333333;
+  /*border: 1px solid gray;*/
+}
+
+.scoreheader {
+  background-color: #36407F;
+  color: #FFFFFF;
+  font-size: 200%;
+  text-align: center;
+  /*border-bottom: 1px solid gray;*/
+}
+
+.score {
+  color: #36407F;
+  float: left;
+  width: 456px;
+  min-height: 85px;
+  /*border-top: 1px solid #36407F;*/
+}
+
+.scoreinfo {
+  vertical-align: top;
+  float: left;
+  width: 200px;
+  font-size: 120%;
+  color: #36407F;
+  /*border-top: 1px solid #36407F;*/
+}
+
+.scoreheader, .score, .scoreinfo, .finish {
+  padding: 10px;
+}
+
+.finish {
+  clear: both;
+  width: 670px;
+  border-bottom: 1px solid #36407F;
+}
+
+.blockdata {
+  float: left;
+  min-width: 100px;
+}
+

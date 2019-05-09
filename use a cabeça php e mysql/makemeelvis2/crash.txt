@@ -1,0 +1,78 @@
+date/time         : 2019-04-23, 22:47:49, 944ms
+computer name     : DESKTOP-920HDFK
+user name         : Alisson
+registered owner  : Alisson
+operating system  : Windows NT New x64 build 9200
+system language   : Portuguese
+system up time    : 6 days 5 hours
+program up time   : 2 seconds
+processors        : 2x AMD Athlon(tm) II X2 270 Processor
+physical memory   : 3482/6142 MB (free/total)
+free disk space   : (C:) 151,30 GB
+display mode      : 1920x1080, 32 bit
+process id        : $1abc
+allocated memory  : 25,98 MB
+command line      : C:\Sendmail\sendmail.exe -t
+executable        : sendmail.exe
+exec. date/time   : 2011-06-18 01:10
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $cbe29ac0, $16219558, $16219558
+exception number  : 1
+exception class   : EIdSocketError
+exception message : Socket Error # 10061 Connection refused.
+
+main thread ($668):
+004408e7 +0107 sendmail.exe IdIOHandlerStack               271  +30 DoConnectTimeout
+00440b4c +01d8 sendmail.exe IdIOHandlerStack               346  +55 TIdIOHandlerStack.ConnectClient
+0046554d +0031 sendmail.exe IdSSLOpenSSL                  2086   +8 TIdSSLIOHandlerSocketOpenSSL.ConnectClient
+00444a9f +0063 sendmail.exe IdIOHandlerSocket              335  +13 TIdIOHandlerSocket.Open
+00465637 +0007 sendmail.exe IdSSLOpenSSL                  2122   +1 TIdSSLIOHandlerSocketOpenSSL.Open
+0044157d +0235 sendmail.exe IdTCPClient                    318  +53 TIdTCPClientCustom.Connect
+00445cc8 +00a4 sendmail.exe IdExplicitTLSClientServerBase  257  +23 TIdExplicitTLSClient.Connect
+0045ab7b +0017 sendmail.exe IdSMTP                         373   +2 TIdSMTP.Connect
+004b5f14 +1060 sendmail.exe sendmail                       808 +326 initialization
+74993742 +0022 KERNEL32.DLL                                         BaseThreadInitThunk
+
+thread $e30:
+74993742 +22 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $e10:
+74993742 +22 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fcc8  ec 08 44 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..D.............
+0019fcd8  dc fc 19 00 ec 08 44 00 - 20 cc 01 02 4d 27 00 00  ......D.....M'..
+0019fce8  7d 00 00 00 54 fd 19 00 - 20 fd 19 00 f8 fc 19 00  }...T...........
+0019fcf8  04 fd 19 00 c8 4b 40 00 - 20 fd 19 00 2c fd 19 00  .....K@.....,...
+0019fd08  c8 4b 40 00 20 fd 19 00 - 19 00 00 00 00 00 00 00  .K@.............
+0019fd18  00 00 00 00 30 41 fd 01 - 58 fd 19 00 51 0b 44 00  ....0A..X...Q.D.
+0019fd28  58 fd 19 00 60 fd 19 00 - c8 4b 40 00 58 fd 19 00  X...`....K@.X...
+0019fd38  b4 4e 4b 00 10 e8 fb 01 - 10 e8 fb 01 90 69 00 02  .NK..........i..
+0019fd48  00 00 00 00 00 00 00 00 - 00 00 00 00 10 e8 fb 01  ................
+0019fd58  74 fd 19 00 52 55 46 00 - 88 fd 19 00 c8 4b 40 00  t...RUF......K@.
+0019fd68  74 fd 19 00 b4 4e 4b 01 - 10 e8 fb 01 bc fd 19 00  t....NK.........
+0019fd78  a5 4a 44 00 10 e8 fb 01 - 3c 56 46 00 83 15 44 00  .JD.....<VF...D.
+0019fd88  94 fd 19 00 5f 4d 40 00 - bc fd 19 00 e8 fd 19 00  ...._M@.........
+0019fd98  c8 4b 40 00 bc fd 19 00 - b4 4e 4b 00 10 e8 fb 01  .K@......NK.....
+0019fda8  b0 e6 fb 01 12 57 46 00 - 10 e8 fb 01 00 00 00 00  .....WF.........
+0019fdb8  b0 e6 fb 01 e0 fd 19 00 - cd 5c 44 00 b4 4e 4b 00  .........\D..NK.
+0019fdc8  ff 00 00 00 80 ab 45 00 - b4 4e 4b 00 b4 4e 4b 00  ......E..NK..NK.
+0019fdd8  ff 00 00 00 b0 e6 fb 01 - 80 ff 19 00 1a 5f 4b 00  ............._K.
+0019fde8  f4 fd 19 00 c8 4b 40 00 - 80 ff 19 00 00 fe 19 00  .....K@.........
+0019fdf8  c8 4b 40 00 80 ff 19 00 - 0c fe 19 00 5f 4d 40 00  .K@........._M@.
+
+disassembling:
+[...]
+004408d8       push    eax
+004408d9       mov     ecx, ebx
+004408db       mov     dl, 1
+004408dd       mov     eax, [$4352ac]
+004408e2       call    -$b1db ($43570c)       ; IdStack.EIdSocketError.CreateError
+004408e7     > call    -$3bc00 ($404cec)      ; System.@RaiseExcept
+004408ec 273   mov     eax, [ebp-4]
+004408ef       mov     edx, [eax+$48]
+004408f2       mov     eax, [$43b04c]
+004408f7       call    -$20ec8 ($41fa34)      ; IdException.EIdException.Toss
+004408fc       jmp     loc_440933
+[...]

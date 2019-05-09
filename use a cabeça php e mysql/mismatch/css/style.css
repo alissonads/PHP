@@ -1,0 +1,29 @@
+.error {
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.login {
+    font-style: italic;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+div .label {
+    font-weight: bold;
+}
+
+img .profile {
+    vertical-align: top;
+}
+
+.name {
+    float: left;
+    max-height: 80px;
+    padding-top: 32px;
+    font-weight: bold;
+}

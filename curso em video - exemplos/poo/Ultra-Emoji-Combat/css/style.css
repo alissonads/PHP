@@ -1,0 +1,48 @@
+html {
+    font: 15pt Arial;
+}
+
+body {
+    background-size: cover;
+}
+
+div::before {
+    content: " Cadastro de Lutadores ";
+    font: 10pt Arial;
+    font-weight: bold;
+    color: white;
+    background-color: #A7ABAE;
+    padding: 5px;
+    display: block;
+    position: relative;
+    width: 550px;
+    top: -10px;
+    left: -10px;
+    text-align: center;
+}
+
+div {
+    background-color: rgba(255, 255, 255, .8);
+    margin: 80px auto 100px auto;
+    padding:  10px;
+    width: 540px;
+    min-height: 300px;
+    border: 1px solid;
+}
+
+a {
+    color: #DCDCDC;
+    background-color: #273747;
+    text-decoration: none;
+    font-weight: bold;
+    font: 11pt Helvetica;
+}
+
+.button {
+    font: 11pt Arial;
+    font-weight: bold;
+    color: white;
+    background-color: #A7ABAE;
+    border: #A7ABAE;
+    padding: 8px 5px 8px 5px;
+}
