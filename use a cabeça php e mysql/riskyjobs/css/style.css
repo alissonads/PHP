@@ -1,0 +1,53 @@
+div .heading {
+    color: #882E2C;
+}
+
+div .results {
+    font-size: smaller;
+    color: #000000;
+    padding: 5px 0px 5px 0px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: #882E2C;
+}
+
+a:hover {
+    background-color: #E2F345;
+}
+
+a:visited {
+    color: #882E2C;
+}
+
+a:active {
+    color: #000000;
+}
+
+div .result_search {
+    width: 100%;
+    min-height: 20px;
+    /*border: 1px solid;*/
+}
+
+.title, .description, .state, .date_posted {
+    float: left;
+}
+
+.title, .date_posted {
+    width: 20%;
+}
+
+.description {
+    width: 50%;
+}
+
+.state {
+    width: 10%;
+}
