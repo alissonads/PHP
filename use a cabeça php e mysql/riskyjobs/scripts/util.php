@@ -1,5 +1,7 @@
 <?php
-    function build_query(string $user_search, int $sort) {
+    // Cria uma consulta de busca a partir das palavras-chaves
+    // de busca e da configuração de classificação
+    function build_query(string $user_search, int $sort) : string {
         $search_query = "SELECT * FROM riskyjobs";
 
         // Remove as possiveis virgulas transformando em espaços
@@ -62,7 +64,9 @@
         return $search_query;
     }
 
-    function generate_sort_links(string $user_search, int $sort) {
+    // Cria links com base na configuração de classificação especificada
+    // Ordenando de acordo com o link clicado
+    function generate_sort_links(string $user_search, int $sort) : string {
         $sort_links = '';
         // echo '<div class="title">Job Title</div> 
             //       <div class="description">Description</div>
@@ -140,5 +144,54 @@
         }
 
         return $sort_links;
+    }
+
+    // Cria links de navegação, com base na página atual e no número de páginas
+    function generate_page_links(string $user_search, 
+                                 int $sort, 
+                                 int $cur_page, 
+                                 int $num_pages) : string{
+            
+        $page_links = '';
+
+        // Se esta página não for a primeira, gera o link "previous"
+        if ($cur_page > 1) {
+            $page_links .= '<a href="' . $_SERVER['PHP_SELF'] .
+                           '?usersearch=' . $user_search . 
+                           '&sort=' . $sort . 
+                           '&page=' . ($cur_page - 1) . 
+                           '"><-</a>';
+        }
+        else {
+            $page_links .= '<-';
+        }
+
+        // Faz um loop através das páginas, gerando os links com os números das páginas
+        for ($i = 1; $i <= $num_pages; $i++) {
+            if ($cur_page == $i) {
+                $page_links .= ' ' . $i;
+            }
+            else {
+                $page_links .= ' <a href="' . $_SERVER['PHP_SELF'] .
+                               '?usersearch=' . $user_search . 
+                               '&sort=' . $sort . 
+                               '&page=' . $i . 
+                               '">' . $i . '</a>';
+            }
+        }
+
+        // Se esta página não for a última, gera o link "next"
+        if ($cur_page < $num_pages) {
+            $page_links .= '<a href="' . $_SERVER['PHP_SELF'] .
+                           '?usersearch=' . $user_search . 
+                           '&sort=' . $sort . 
+                           '&page=' . ($cur_page + 1) . 
+                           '"> -></a>';
+        }
+        else {
+            $page_links .= ' ->';
+        }
+
+        return $page_links;
     }
 ?>

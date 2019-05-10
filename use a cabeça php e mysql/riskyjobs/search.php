@@ -14,8 +14,15 @@
         <h3>Risky Jobs - Resultado</h3>
 
         <?php
+            // Obtém a configuração de classificação e as palavras-chaves
+            // de busca a partir da URL, usando GET 
             $sort = $_GET['sort'] ?? 0;
             $user_search = $_GET['usersearch'];
+
+            // Calcula as informações da paginação
+            $cur_page = $_GET['page'] ?? 1;
+            $results_per_page = 5; // número de resultados por página Limit 5
+            $skip = (($cur_page - 1) * $results_per_page); // número de linhas a ser pulada para o LIMIT ex (LIMIT 10, 5)
             
             // Inicia a tabela de resultados
             echo '<div style="width:650px; min-height:400px; padding:5px; border:1px solid">';
@@ -39,6 +46,19 @@
             $result = $dbc->query($query)
                         or die('Error querying database.');
 
+            $total = $result->num_rows;
+            $num_pages = ceil($total / $results_per_page);
+
+            // Adiciona a cláusula LIMIT na query
+            // LIMIT com 2 parametros:
+            // 1° quantas linhas pula-rá
+            // 2° quantas linhas (resultados) retorna-rá
+            // Ex: ... LIMIT 10, 5 -> vai pular 10 linhas
+            // iniciando na 11ª linha e retorna 5 resultados.
+            $query = $query . " LIMIT $skip, $results_per_page";
+            $result = $dbc->query($query)
+                        or die('Error querying database.');
+
             // Mostra os resultados da consulta
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="results" style="width:100%; min-height:100px">';
@@ -51,6 +71,11 @@
             }
             // Finaliza a tabela de resultados
             echo '</div>';
+            
+            if ($num_pages > 1) {
+                // Se possuir mais de 1 página, gera os links para elas
+                echo generate_page_links($user_search, $sort, $cur_page, $num_pages);
+            }
 
             $dbc->close();
         ?>
