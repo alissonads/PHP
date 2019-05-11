@@ -11,7 +11,7 @@
         <img src="img/riskyjobs_title.gif" alt="Risky Jobs" />
         <img src="img/riskyjobs_fireman.jpg" alt="Risky Jobs" style="float:right" />
 
-        <h3>Risky Jobs - Resultado</h3>
+        <h3>Risky Jobs - Search Results</h3>
 
         <?php
             // Obtém a configuração de classificação e as palavras-chaves
