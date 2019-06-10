@@ -1,0 +1,145 @@
+body {
+    font-family: "Robotto", sans-serif;
+    min-height: 100vh;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.25 !important;
+}
+
+div .heading {
+    color: #882E2C;
+}
+
+div .results {
+    font-size: smaller;
+    color: #000000;
+    padding: 5px 0px 5px 0px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: #882E2C;
+}
+
+a:hover {
+    background-color: #E2F345;
+}
+
+a:visited {
+    color: #882E2C;
+}
+
+a:active {
+    color: #000000;
+}
+
+div .result_search {
+    width: 100%;
+    min-height: 20px;
+    /*border: 1px solid;*/
+}
+
+textarea {
+    font: inherit;
+    resize: vertical;
+}
+
+.error {
+    color: #FF0000
+}
+
+.empty {
+    color: #f00;
+    font-style: italic;
+    font-size: xx-small;
+}
+
+.title, .description, .state, .date_posted {
+    float: left;
+}
+
+.title, .date_posted {
+    width: 20%;
+}
+
+.description {
+    width: 50%;
+}
+
+.state {
+    width: 10%;
+}
+
+.container {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    padding-top: 2rem;
+    flex: 1 1 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .30);
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    width: 400px;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    padding: 2px;
+    margin-bottom: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.data {
+    width: 100%;
+    border-radius: .25rem;
+    /*font-size: 1rem;*/
+    padding: .37rem .50rem;
+    /*line-height: 1.5;*/
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: solid 0.04rem rgba(0, 0, 0, .12);
+    display: block;
+}
+
+.cont_data {
+    width: 70%;
+}
+
+.cont_desc {
+    width: 25%;
+    color: #495057;
+    margin-bottom: 4px !important;
+    padding-top: 5px;
+    display: inline-block; 
+}
+
+.resume {
+    width: 100%;
+    border: 0.04rem solid rgba(0, 0, 0, .12);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border-radius: .25rem;
+    overflow: auto;
+    font: inherit;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 1rem;
+    color: #495057;
+    box-shadow: none;
+    outline: none;
+    text-transform: uppercase;
+}
